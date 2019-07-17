@@ -1,0 +1,18 @@
+
+#注册中心的协议和地址
+dubbo:
+  application:
+    name: provider
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+#连接监控中心
+  monitor:
+    protocol: registry
+#通信规则（通信协议和接口）
+  protocol:
+    name: dubbo
+    port: 2802
+ #开启包扫描，可替代 @EnableDubbo 注解
+    scan:
+     base-packages: com.example.dubbo_service_provider.service.impl
